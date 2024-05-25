@@ -64,7 +64,7 @@ public class Address {
                 }
             }
         }
-        return false;
+        return true;
     }
 
     private static boolean validateSevenCharPostalCode(String postalCode) {
