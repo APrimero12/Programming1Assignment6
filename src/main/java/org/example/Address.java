@@ -1,9 +1,6 @@
 package org.example;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @ToString
 @EqualsAndHashCode
@@ -72,5 +69,29 @@ public class Address {
             return false;
         }
         return validateSixCharPostalCode(postalCode.replace(" ", ""));
+    }
+
+    public void setStreetNo(int streetNo) {
+        this.streetNo = streetNo;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 }
