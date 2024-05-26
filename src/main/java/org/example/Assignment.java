@@ -1,8 +1,11 @@
 package org.example;
 
+import lombok.NoArgsConstructor;
+
 import java.util.ArrayList;
 import java.util.Random;
 
+@NoArgsConstructor
 public class Assignment {
 
     private String assignmentId;
@@ -13,10 +16,6 @@ public class Assignment {
     private ArrayList<Integer> scores;
 
     private static int nextId = 1;
-
-    public Assignment() {
-
-    }
 
     public Assignment(String assignmentId, String assignmentName, double weight, int maxScore,
                       double assignmentAverage, ArrayList<Integer> scores) {
