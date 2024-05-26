@@ -17,14 +17,19 @@ public class Assignment {
 
     private static int nextId = 1;
 
-    public Assignment(String assignmentId, String assignmentName, double weight, int maxScore,
-                      double assignmentAverage, ArrayList<Integer> scores) {
-        this.assignmentId = assignmentId;
+    public Assignment(String assignmentName, double weight, int maxScore) {
+        this.assignmentId = generateAssignmentId();
         this.assignmentName = assignmentName;
         this.weight = weight;
         this.maxScore = maxScore;
         this.assignmentAverage = assignmentAverage;
-        this.scores = scores;
+        this.scores = new ArrayList<>();
+    }
+
+    private String generateAssignmentId() {
+        String id = "A" + String.format("%04d", nextId);
+        nextId++;
+        return id;
     }
 
     public void calcAssignmentAvg() {
