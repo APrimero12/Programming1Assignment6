@@ -2,6 +2,7 @@ package org.example;
 
 import lombok.*;
 
+@NoArgsConstructor
 @ToString
 @EqualsAndHashCode
 @Getter

@@ -2,10 +2,12 @@ package org.example;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.ArrayList;
 
+@NoArgsConstructor
 @EqualsAndHashCode
 @Getter
 public class Student {
@@ -21,7 +23,7 @@ public class Student {
     @Setter
     private Department department;
     @Setter
-    private final ArrayList<Course> registeredCourses;
+    private ArrayList<Course> registeredCourses;
 
     private static int nextId = 1;
 
