@@ -24,6 +24,12 @@ public class Department {
         }
     }
 
+    private String generateDepartmentId() {
+        String id = "D" + String.format("%02d", nextId);
+        nextId++;
+        return id;
+    }
+
     public static boolean validateDepartmentName(String departmentName) {
         if (departmentName == null) {
             return false;
