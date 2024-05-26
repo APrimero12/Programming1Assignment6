@@ -12,10 +12,7 @@ public class Department {
     private String departmentName;
 
     private static int nextId = 1;
-
-    public Department() {
-
-    }
+    
 
     public Department(@NonNull String departmentId, String departmentName) {
         if (validateDepartmentName(departmentName)) {
