@@ -5,7 +5,6 @@ import lombok.*;
 @ToString
 @EqualsAndHashCode
 @Getter
-@Setter
 public class Address {
 
     private int streetNo;
