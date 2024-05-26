@@ -15,11 +15,11 @@ public class Department {
 
     public Department(String departmentName) {
         if (validateDepartmentName(departmentName)) {
+            this.departmentId = generateDepartmentId();
+            this.departmentName = departmentName;
+        } else {
             this.departmentId = null;
             this.departmentName = null;
-        } else {
-            this.departmentId = "" + nextId++;
-            this.departmentName = generateDepartmentId();
         }
     }
 
