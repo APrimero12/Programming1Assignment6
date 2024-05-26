@@ -14,7 +14,7 @@ public class Address {
     private String postalCode;
     private String country;
 
-    public Address(int streetNo, String street, String city, String province, String postalCode, String country) {
+    public Address(String street, int streetNo,  String city, String province, String postalCode, String country) {
         if (isPostalCodeValid(postalCode)) {
             this.streetNo = streetNo;
             this.street = street;

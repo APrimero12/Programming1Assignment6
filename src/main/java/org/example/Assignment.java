@@ -1,11 +1,13 @@
 package org.example;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 @NoArgsConstructor
+@Getter
 public class Assignment {
 
     private String assignmentId;

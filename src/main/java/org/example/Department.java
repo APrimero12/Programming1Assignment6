@@ -13,14 +13,13 @@ public class Department {
 
     private static int nextId = 1;
 
-    public Department(@NonNull String departmentId, String departmentName) {
+    public Department(String departmentName) {
         if (validateDepartmentName(departmentName)) {
             this.departmentId = null;
             this.departmentName = null;
         } else {
             this.departmentId = "" + nextId++;
-            this.departmentName = departmentName;
-
+            this.departmentName = generateDepartmentId();
         }
     }
 
@@ -31,10 +30,7 @@ public class Department {
     }
 
     public static boolean validateDepartmentName(String departmentName) {
-        if (departmentName == null) {
-            return false;
-        }
-        return true;
+        return departmentName != null && departmentName.matches("[a-zA-Z ]+");
     }
 
     public String getDepartmentId() {
