@@ -45,7 +45,7 @@ public class Address {
     } else if (postalCode.length() == 7) {
         return validateSevenCharPostalCode(postalCode);
     } else {
-        return false;
+        return true;
     }
 }
 
